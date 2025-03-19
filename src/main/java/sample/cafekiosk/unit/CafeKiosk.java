@@ -26,7 +26,7 @@ public class CafeKiosk {
         // 경계값 생각해보기 ->
         // count의 값이 0 or -1 이 만약 들어온다면? ->
         // 예외를 던저주자
-        if (count < 0) {
+        if (count <= 0) {
             throw new IllegalArgumentException("음료는 1잔 이상 주문하실 수 있습니다.");
         }
 
