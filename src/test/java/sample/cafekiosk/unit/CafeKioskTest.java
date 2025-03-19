@@ -5,6 +5,8 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import sample.cafekiosk.unit.beverage.Americano;
 import sample.cafekiosk.unit.beverage.Latte;
 import sample.cafekiosk.unit.order.Order;
@@ -44,14 +46,16 @@ class CafeKioskTest {
         assertThat(cafeKiosk.getBeverages().get(1)).isEqualTo(americano);
     }
 
-    @Test
-    void addZeroBeverages() {
+    @ParameterizedTest
+    @DisplayName("카페음료 주문 시 수량 -1, 0 입력 시 예외처리가 된다.")
+    @ValueSource(ints = {-1, 0})
+    void addBeverages(int quantity) {
         CafeKiosk cafeKiosk = new CafeKiosk();
         Americano americano = new Americano();
 
         // 예외처리 확인
-        assertThatThrownBy(() -> cafeKiosk.add(americano, 0))
-                .isInstanceOf(IllegalAccessError.class) // 어떤 예외가 터지는가?
+        assertThatThrownBy(() -> cafeKiosk.add(americano, quantity))
+                .isInstanceOf(IllegalArgumentException.class) // 어떤 예외가 터지는가?
                 .hasMessage("음료는 1잔 이상 주문하실 수 있습니다."); // 어떤 예외 메시지를 가지고 있는가?
     }
 
