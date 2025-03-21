@@ -7,13 +7,20 @@
 
 이 프로젝트는 단순한 코드 작성뿐 아니라 테스트를 통해 애플리케이션의 신뢰성을 확보하는 방법을 학습하고, 실제 개발 과정에서 테스트의 중요성을 체감하는 데 중점을 두었습니다. TDD의 실무 적용 경험을 통해 테스트의 가치와 효과를 깊이 이해하는 기회가 되기를 기대하고 있습니다.
 
+<br>
+
 ## 💻 시스템 환경 및 소프트웨어
-프로그래밍 언어: Java 17 <br>
-프레임워크: Spring Boot 3.4.3 <br>
-빌드 툴: Gradle 8.1 <br>
-테스트 프레임워크: JUnit 5, AssertJ <br>
-IDE 및 편집기: IntelliJ IDEA Ultimate <br>
-API 테스트 : IntelliJ IDEA Ultimate HTTP Client
+| **항목**                | **내용**                          |  
+|-------------------------|----------------------------------|  
+| **프로그래밍 언어**      | Java 17                          |  
+| **프레임워크**           | Spring Boot 3.4.3                |  
+| **빌드 툴**             | Gradle 8.1                       |  
+| **테스트 프레임워크**     | JUnit 5, AssertJ                 |  
+| **IDE 및 편집기**         | IntelliJ IDEA Ultimate           |  
+| **API 테스트 도구**       | IntelliJ IDEA Ultimate HTTP Client |  
+
+
+<br>
 
 ## 💁🏻 카페 키오스크 요구사항
 
